@@ -1,0 +1,19 @@
+2018-12-04 17:23:56.063322 - Server started 
+2018-12-04 17:23:58.994419 - Incoming client connection request 
+2018-12-04 17:23:58.994419 - Successful connection 
+2018-12-04 17:24:05.085545 - Artist name received: test
+2018-12-04 17:24:08.671185 - Client disconnected. Length of time connected: 0:00:12.607863
+2018-12-07 15:36:58.736895 - Server started 
+2018-12-07 15:37:01.511834 - Incoming client connection request 
+2018-12-07 15:37:01.511834 - Successful connection 
+2018-12-07 15:37:06.908323 - Artist name received: test
+2018-12-07 15:37:09.350652 - Client disconnected. Length of time connected: 0:00:10.613757
+2020-06-10 11:07:04.203623 - Server started 
+2020-06-10 11:07:28.444142 - Incoming client connection request 
+2020-06-10 11:07:28.444142 - Successful connection 
+2020-06-10 11:07:49.777648 - Artist name received: Paul Anka
+2020-06-10 11:08:00.487505 - Client disconnected. Length of time connected: 0:00:56.283882
+2020-06-10 11:08:03.633195 - Incoming client connection request 
+2020-06-10 11:08:03.633195 - Successful connection 
+2020-06-10 11:08:13.603439 - Artist name received: Debby Boone
+2020-06-10 11:08:20.718984 - Client disconnected. Length of time connected: 0:01:16.515361
