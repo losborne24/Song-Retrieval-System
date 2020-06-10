@@ -2,16 +2,16 @@ import socket
 import pickle       # allows lists to be sent to client.
 import sys
 import datetime
-
+import os
 
 def main():
-    hash_music = read_file("100worst.txt")
-    setup_connection(hash_music, "server.log")
+    hash_music = read_file("../data/100worst.txt")
+    setup_connection(hash_music, "./logs/server.log")
 
 
 def read_file(filename):
     hash_music = {}
-    server_file = open(filename, "r")
+    server_file = open(os.path.abspath(os.path.join(os.path.dirname( __file__ ), filename)), "r")
     lines = server_file.readlines()                # put each line into list
     for i in range(0, len(lines)):
         line = lines[i]
@@ -36,7 +36,7 @@ def read_file(filename):
 
 
 def setup_connection(hash_music, filename):
-    server_file = open(filename, "a")                                  # append to log server_file
+    server_file = open(os.path.abspath(os.path.join(os.path.dirname( __file__ ), filename)), "a")                                  # append to log server_file
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)   # create socket
     except socket.error:
@@ -59,7 +59,7 @@ def setup_connection(hash_music, filename):
         try:
             server_file.close()
             c, address = s.accept()                                 # Establish connection with client.
-            server_file = open(filename, "a")
+            server_file = open(os.path.abspath(os.path.join(os.path.dirname( __file__ ), filename)), "a")                                  
             server_file.write(str(datetime.datetime.now()) + " - Incoming client connection request \n")
             server_file.write(str(datetime.datetime.now()) + " - Successful connection \n")
             print("Got connection from ", address)

@@ -2,10 +2,11 @@ import socket
 import pickle
 import sys
 import datetime
-
+import os
 
 def main():
-    client_file = open("client.log", "a")
+    
+    client_file = open(os.path.abspath(os.path.join(os.path.dirname( __file__ ), "./logs/client.log")), "a")
     try:
         s = socket.socket()
     except socket.error:

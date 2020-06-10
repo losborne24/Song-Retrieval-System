@@ -1,2 +1,2 @@
 #!/bin/bash
-python server.py
+python "Song Retrieval System/server.py"
